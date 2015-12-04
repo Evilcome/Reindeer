@@ -8,26 +8,26 @@
 
 import UIKit
 
-public class BannerPageViewController: UIPageViewController {
+public class BannerPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     // MARK: Private Property
+    
+    // user setted callback when tapped
+    private var _bannerTapHandler: BannerTapHandler?
+    
+    // user custom remote image fetcher
+    private var _remoteImageFetcher: RemoteImageFetcher?
     
     // MARK: Public Property
     
     // rolling images
-    public var image: [AnyObject?] = []
+    public var images: [AnyObject?] = []
     
     // rolling interval
     public var interval: NSTimeInterval = 0
     
     // placeholder image
     public var placeholderImage: UIImage?
-    
-    // user setted callback when tapped
-    public var bannerTapperHandler: BannerTapHandler?
-    
-    // user custom remote image fetcher
-    public var remoteImageFetcher: RemoteImageFetcher?
 
     // MARK: Life Circle
     
@@ -49,6 +49,36 @@ public class BannerPageViewController: UIPageViewController {
     }
     
     public func stopRolling() {
+        
+    }
+    
+    public func setRemoteImageFetche(fetcher: RemoteImageFetcher) {
+        _remoteImageFetcher = fetcher
+    }
+    
+    public func setBannerTapHandler(handler: BannerTapHandler) {
+        _bannerTapHandler = handler
+    }
+    
+    // MARK: UIPageViewControllerDataSource
+    
+    public func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+        
+        return nil
+    }
+    
+    public func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+        
+        return nil
+    }
+    
+    // MARK: UIPageViewControllerDelegate
+    
+    public func pageViewController(pageViewController: UIPageViewController, willTransitionToViewControllers pendingViewControllers: [UIViewController]) {
+        
+    }
+    
+    public func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
     }
 }
