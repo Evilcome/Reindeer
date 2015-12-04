@@ -18,10 +18,17 @@ public class BannerPageViewController: UIPageViewController, UIPageViewControlle
     // user custom remote image fetcher
     private var _remoteImageFetcher: RemoteImageFetcher?
     
+    // page controler 
+    private var _pageControl: UIPageControl
+    
     // MARK: Public Property
     
     // rolling images
-    public var images: [AnyObject?] = []
+    public var images: [AnyObject?] = [] {
+        didSet {
+            _pageControl.numberOfPages = images.count
+        }
+    }
     
     // rolling interval
     public var interval: NSTimeInterval = 0 {
@@ -39,7 +46,17 @@ public class BannerPageViewController: UIPageViewController, UIPageViewControlle
     
     // MARK: Init
     
-    
+    public init() {
+        
+        // init the page controller and banner views
+        _pageControl = UIPageControl()
+        
+        super.init(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
+    }
+
+    required public init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: Life Circle
     
@@ -52,6 +69,15 @@ public class BannerPageViewController: UIPageViewController, UIPageViewControlle
     override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: Private Function
+    
+    private func _setUpFirstBanner(banner: BannerViewController) {
+        banner.placeholderImage = self.placeholderImage
+        banner._image = self.images.first!
+        banner.tapHandler = self._bannerTapHandler
+        banner.remoteImageFetcher = self._remoteImageFetcher
     }
 
     // MARK: Public Function
