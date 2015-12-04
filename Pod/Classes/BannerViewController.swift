@@ -9,11 +9,11 @@
 import UIKit
 
 
-typealias BannerTapHandler = (index: Int) -> Void
-typealias RemoteImageFetcher = (imageView: UIImageView, url: String, placeHolderImage: UIImage?) -> Void
+public typealias BannerTapHandler = (index: Int) -> Void
+public typealias RemoteImageFetcher = (imageView: UIImageView, url: String, placeHolderImage: UIImage?) -> Void
 
 
-public class BannerViewController: UIViewController {
+class BannerViewController: UIViewController {
     
     // MARK: Private Properties
     
@@ -38,11 +38,11 @@ public class BannerViewController: UIViewController {
     var remoteImageFetcher: RemoteImageFetcher?
     
     // placeholder image
-    public var placeholderImage: UIImage?
+    var placeholderImage: UIImage?
 
     // MARK: Life Circle
     
-    override public func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
 
         // init the imageView
@@ -66,27 +66,16 @@ public class BannerViewController: UIViewController {
         self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[_tapAreaButton]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: bindings))
     }
 
-    override public func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    override public func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         self._renderImage()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     // MARK: User Action
 
@@ -121,8 +110,8 @@ public class BannerViewController: UIViewController {
         }
     }
     
-    public func setImage(image: AnyObject?) {
+    func setImage(image: AnyObject?) {
         self._image = image
-//        self._renderImage()
+        self._renderImage()
     }
 }

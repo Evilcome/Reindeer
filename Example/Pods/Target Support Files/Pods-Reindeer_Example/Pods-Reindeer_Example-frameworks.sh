@@ -84,8 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Reindeer_Example/Kingfisher.framework"
   install_framework "Pods-Reindeer_Example/Reindeer.framework"
+  install_framework "Pods-Reindeer_Example/SnapKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Reindeer_Example/Kingfisher.framework"
   install_framework "Pods-Reindeer_Example/Reindeer.framework"
+  install_framework "Pods-Reindeer_Example/SnapKit.framework"
 fi

@@ -2,11 +2,17 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 target 'Reindeer_Example', :exclusive => true do
-  pod "Reindeer", :path => "../"
+    pod "Reindeer", :path => "../"
+    
+    # use for fetch remote image
+    pod 'Kingfisher', '~> 1.7'
+    
+    # use for programming auto layout
+    pod 'SnapKit', '~> 0.15.0'
 end
 
 target 'Reindeer_Tests', :exclusive => true do
-  pod "Reindeer", :path => "../"
+    pod "Reindeer", :path => "../"
 
   
 end

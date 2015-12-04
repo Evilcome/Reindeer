@@ -26,10 +26,17 @@ class ViewController: UIViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if let banner = segue.destinationViewController as? BannerViewController {
-            let image = UIImage(named: "reindeer-1")
-            banner.setImage(image)
+        if let banner = segue.destinationViewController as? BannerPageViewController {
+            
+            // 1. Set the rolling interval, 0 means no auto-rolling
+            banner.interval = 5
+            
+            // 2. Set placeholder image
+            banner.placeholderImage = UIImage(named: "placeholder")
+            
+            // 
         }
     }
+
 }
 

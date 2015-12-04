@@ -40,10 +40,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Banner View Controller-->
+        <!--Banner Page View Controller-->
         <scene sceneID="lJh-Ik-zGz">
             <objects>
-                <viewController id="oga-8N-ZiA" customClass="BannerViewController" customModule="Reindeer" sceneMemberID="viewController">
+                <viewController id="oga-8N-ZiA" customClass="BannerPageViewController" customModule="Reindeer" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rf7-2B-HWR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="226"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Nx-LY-QcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245" y="-303"/>
+            <point key="canvasLocation" x="245" y="-255"/>
         </scene>
     </scenes>
 </document>

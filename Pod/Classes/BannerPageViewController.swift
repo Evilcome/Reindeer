@@ -8,28 +8,47 @@
 
 import UIKit
 
-class BannerPageViewController: UIPageViewController {
+public class BannerPageViewController: UIPageViewController {
+    
+    // MARK: Private Property
+    
+    // MARK: Public Property
+    
+    // rolling images
+    public var image: [AnyObject?] = []
+    
+    // rolling interval
+    public var interval: NSTimeInterval = 0
+    
+    // placeholder image
+    public var placeholderImage: UIImage?
+    
+    // user setted callback when tapped
+    public var bannerTapperHandler: BannerTapHandler?
+    
+    // user custom remote image fetcher
+    public var remoteImageFetcher: RemoteImageFetcher?
 
-    override func viewDidLoad() {
+    // MARK: Life Circle
+    
+    override public func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
+    override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    // MARK: Public Function
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    public func startRolling() {
+        
     }
-    */
-
+    
+    public func stopRolling() {
+        
+    }
 }
