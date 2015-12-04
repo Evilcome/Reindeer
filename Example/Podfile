@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'Reindeer_Example', :exclusive => true do
+  pod "Reindeer", :path => "../"
+end
+
+target 'Reindeer_Tests', :exclusive => true do
+  pod "Reindeer", :path => "../"
+
+  
+end

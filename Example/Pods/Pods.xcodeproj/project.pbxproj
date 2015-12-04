@@ -1,0 +1,780 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		327BF50D46D72EBF7907B1B1C2FAC96A /* Reindeer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3F939C3BD0E3C3BFBAF9D0A6A0F3556D /* Reindeer.bundle */; };
+		4BC813F99A7B09FE5088192DA785B952 /* Reindeer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B07A4B7F7F88F8F255BE38D251D7673 /* Reindeer-dummy.m */; };
+		5BD599715F4DC7E35E756657883ACE04 /* Pods-Reindeer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C31AC7DD2098577096045DDF9E8A0B7F /* Pods-Reindeer_Tests-dummy.m */; };
+		615351A5821E678A69CD3BD2C358C3BE /* Pods-Reindeer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF49364059A571AFC204D57D264A7401 /* Pods-Reindeer_Example-dummy.m */; };
+		6693DD132BFEFBD6C8109D8049A7BA90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		B1073446B21D8BADA118F4A16FA5E699 /* Pods-Reindeer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D948E3C9E26897A43D911B019D6209D /* Pods-Reindeer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0C587B230414755353A0CB5AD3B27EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		C6C04BC515AE78A3B41897B6F82A7F10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		CADFC136BEFD7AAF6ED088814C0A9227 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A769C3E976B3CBB00D8F795BCD8025 /* ReplaceMe.swift */; };
+		E6F1EAB43C4044E8916C638BE353BC48 /* Reindeer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ED4D2B6CF8F0F36B75C28803D4982A7 /* Reindeer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED16739ABBDF48B54DEBDD86C966B1BB /* Pods-Reindeer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3796FE922F4F856EE7184BF2F785B9B2 /* Pods-Reindeer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47035FFCE75572612BAF1ED3E6D6ECC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 493AC79C5EDF4B9CAB7BD029C5367056;
+			remoteInfo = Reindeer;
+		};
+		61A81099BC75A85D9A237B6ECBEA5157 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F672365AA903ED9A177792BC0DAD8EA;
+			remoteInfo = "Reindeer-Reindeer";
+		};
+		89506BEF8DDA709267FF0DEE24F1C331 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 493AC79C5EDF4B9CAB7BD029C5367056;
+			remoteInfo = Reindeer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02BA986B6C66913BCF2D24B453575C75 /* Pods-Reindeer_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Reindeer_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		070F20B2C82F82FF6D4489B4DA9DC088 /* Pods_Reindeer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reindeer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10DDE07C5BE38912F73F5C218686275A /* Pods-Reindeer_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Reindeer_Example-frameworks.sh"; sourceTree = "<group>"; };
+		1CA3D4C64AF41572F6BEEBC0704E676F /* Pods-Reindeer_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Reindeer_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1D5FC8D4E13C3614DD9DF3111C23CF15 /* Pods-Reindeer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Reindeer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		2D948E3C9E26897A43D911B019D6209D /* Pods-Reindeer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Reindeer_Example-umbrella.h"; sourceTree = "<group>"; };
+		348876D513D2249CF865FB7615B4251B /* Pods-Reindeer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Reindeer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3796FE922F4F856EE7184BF2F785B9B2 /* Pods-Reindeer_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Reindeer_Tests-umbrella.h"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3F939C3BD0E3C3BFBAF9D0A6A0F3556D /* Reindeer.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Reindeer.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		45E76872D70ECA06857168445034A683 /* Pods-Reindeer_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Reindeer_Tests-resources.sh"; sourceTree = "<group>"; };
+		46C58F7D919E1993DF6AD961ECA8A689 /* Pods-Reindeer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Reindeer_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		4ED4D2B6CF8F0F36B75C28803D4982A7 /* Reindeer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Reindeer-umbrella.h"; sourceTree = "<group>"; };
+		52744E2E10C0AA3427601B74588B1A1D /* Reindeer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Reindeer.modulemap; sourceTree = "<group>"; };
+		628A694329B17B9DAA954CEC661BB06B /* Pods-Reindeer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Reindeer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		699DD86BF480992E8355D0E74E2E14D2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B07A4B7F7F88F8F255BE38D251D7673 /* Reindeer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Reindeer-dummy.m"; sourceTree = "<group>"; };
+		6B3D07C7743C7A450770FBE67F370ABE /* Pods-Reindeer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Reindeer_Example.modulemap"; sourceTree = "<group>"; };
+		7E0B9DC00D9F5173F6EE167F4D03A356 /* Pods-Reindeer_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Reindeer_Tests.modulemap"; sourceTree = "<group>"; };
+		8C94AB8F435F3C0F041E016C89FCB4CF /* Pods-Reindeer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Reindeer_Example.release.xcconfig"; sourceTree = "<group>"; };
+		94A769C3E976B3CBB00D8F795BCD8025 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		A8C525D90E2BFBB9821DB2B79B1445AC /* Pods_Reindeer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reindeer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BED4A4A7AE42AF65B19ED367978FAECF /* Pods-Reindeer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Reindeer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C1DDB04BC934C091D5DDD76F1CDC1299 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C31AC7DD2098577096045DDF9E8A0B7F /* Pods-Reindeer_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Reindeer_Tests-dummy.m"; sourceTree = "<group>"; };
+		D66FD2620DB4BF2E0FFF84796D981869 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D880C002BAF5933D26B921FAF934C30A /* Pods-Reindeer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Reindeer_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		DBEB8ADF4E2A1924FEF43352AAA93D79 /* Reindeer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reindeer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAD897CFA06F0265F896669759CF8C8E /* Pods-Reindeer_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Reindeer_Example-resources.sh"; sourceTree = "<group>"; };
+		EF49364059A571AFC204D57D264A7401 /* Pods-Reindeer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Reindeer_Example-dummy.m"; sourceTree = "<group>"; };
+		F9AA008F7E7A99910C4517A271748E74 /* Reindeer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Reindeer-prefix.pch"; sourceTree = "<group>"; };
+		FD6BE72B6ABD5E4FA8AA4542F3C26265 /* Reindeer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Reindeer.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26884D5043E2D3A99042AE6A23C1D3F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28D58EC935A4D8310367A9A118E6E6C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6693DD132BFEFBD6C8109D8049A7BA90 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47B7AFFA0BCEE70D04F7D10D2B2AAB65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6C04BC515AE78A3B41897B6F82A7F10 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BB24DB53130CB9BC2FD73DFEC4AD5D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0C587B230414755353A0CB5AD3B27EF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		105B72B62B9BB83BA7C16FDBF67093FE /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				321B288C03650789A5ADD9E606B6E0D9 /* Reindeer */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		1830FF647DB5AC352EDE1EFB5C56FD8A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				699DD86BF480992E8355D0E74E2E14D2 /* Info.plist */,
+				52744E2E10C0AA3427601B74588B1A1D /* Reindeer.modulemap */,
+				FD6BE72B6ABD5E4FA8AA4542F3C26265 /* Reindeer.xcconfig */,
+				6B07A4B7F7F88F8F255BE38D251D7673 /* Reindeer-dummy.m */,
+				F9AA008F7E7A99910C4517A271748E74 /* Reindeer-prefix.pch */,
+				4ED4D2B6CF8F0F36B75C28803D4982A7 /* Reindeer-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Reindeer";
+			sourceTree = "<group>";
+		};
+		321B288C03650789A5ADD9E606B6E0D9 /* Reindeer */ = {
+			isa = PBXGroup;
+			children = (
+				BC9AF619CDD0C35E0224020607D7A0CD /* Pod */,
+				1830FF647DB5AC352EDE1EFB5C56FD8A /* Support Files */,
+			);
+			name = Reindeer;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		4189E5C334DA699F5068EE7D1E8F6E86 /* Pods-Reindeer_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C1DDB04BC934C091D5DDD76F1CDC1299 /* Info.plist */,
+				7E0B9DC00D9F5173F6EE167F4D03A356 /* Pods-Reindeer_Tests.modulemap */,
+				BED4A4A7AE42AF65B19ED367978FAECF /* Pods-Reindeer_Tests-acknowledgements.markdown */,
+				1CA3D4C64AF41572F6BEEBC0704E676F /* Pods-Reindeer_Tests-acknowledgements.plist */,
+				C31AC7DD2098577096045DDF9E8A0B7F /* Pods-Reindeer_Tests-dummy.m */,
+				02BA986B6C66913BCF2D24B453575C75 /* Pods-Reindeer_Tests-frameworks.sh */,
+				45E76872D70ECA06857168445034A683 /* Pods-Reindeer_Tests-resources.sh */,
+				3796FE922F4F856EE7184BF2F785B9B2 /* Pods-Reindeer_Tests-umbrella.h */,
+				628A694329B17B9DAA954CEC661BB06B /* Pods-Reindeer_Tests.debug.xcconfig */,
+				46C58F7D919E1993DF6AD961ECA8A689 /* Pods-Reindeer_Tests.release.xcconfig */,
+			);
+			name = "Pods-Reindeer_Tests";
+			path = "Target Support Files/Pods-Reindeer_Tests";
+			sourceTree = "<group>";
+		};
+		5FB702904D64FFB94AB60AD1173E2910 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4E9B8C39EA7CE7D79171D1B97EAE209 /* Pods-Reindeer_Example */,
+				4189E5C334DA699F5068EE7D1E8F6E86 /* Pods-Reindeer_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				105B72B62B9BB83BA7C16FDBF67093FE /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				BBB8438C1F8C69F80BF7B46F62532E7F /* Products */,
+				5FB702904D64FFB94AB60AD1173E2910 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		ABF81604BD8C9A89E6C651E737CBCAA0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				94A769C3E976B3CBB00D8F795BCD8025 /* ReplaceMe.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BBB8438C1F8C69F80BF7B46F62532E7F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8C525D90E2BFBB9821DB2B79B1445AC /* Pods_Reindeer_Example.framework */,
+				070F20B2C82F82FF6D4489B4DA9DC088 /* Pods_Reindeer_Tests.framework */,
+				3F939C3BD0E3C3BFBAF9D0A6A0F3556D /* Reindeer.bundle */,
+				DBEB8ADF4E2A1924FEF43352AAA93D79 /* Reindeer.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC9AF619CDD0C35E0224020607D7A0CD /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				ABF81604BD8C9A89E6C651E737CBCAA0 /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F4E9B8C39EA7CE7D79171D1B97EAE209 /* Pods-Reindeer_Example */ = {
+			isa = PBXGroup;
+			children = (
+				D66FD2620DB4BF2E0FFF84796D981869 /* Info.plist */,
+				6B3D07C7743C7A450770FBE67F370ABE /* Pods-Reindeer_Example.modulemap */,
+				348876D513D2249CF865FB7615B4251B /* Pods-Reindeer_Example-acknowledgements.markdown */,
+				1D5FC8D4E13C3614DD9DF3111C23CF15 /* Pods-Reindeer_Example-acknowledgements.plist */,
+				EF49364059A571AFC204D57D264A7401 /* Pods-Reindeer_Example-dummy.m */,
+				10DDE07C5BE38912F73F5C218686275A /* Pods-Reindeer_Example-frameworks.sh */,
+				EAD897CFA06F0265F896669759CF8C8E /* Pods-Reindeer_Example-resources.sh */,
+				2D948E3C9E26897A43D911B019D6209D /* Pods-Reindeer_Example-umbrella.h */,
+				D880C002BAF5933D26B921FAF934C30A /* Pods-Reindeer_Example.debug.xcconfig */,
+				8C94AB8F435F3C0F041E016C89FCB4CF /* Pods-Reindeer_Example.release.xcconfig */,
+			);
+			name = "Pods-Reindeer_Example";
+			path = "Target Support Files/Pods-Reindeer_Example";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		034C731BE697EE7300F3761107B90D87 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1073446B21D8BADA118F4A16FA5E699 /* Pods-Reindeer_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		282962806B98922A54F58372AA8A60C4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED16739ABBDF48B54DEBDD86C966B1BB /* Pods-Reindeer_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37FBFF9F0472C7BCBDC8862BFFB22317 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6F1EAB43C4044E8916C638BE353BC48 /* Reindeer-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		493AC79C5EDF4B9CAB7BD029C5367056 /* Reindeer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAFF0A32F7F9C0D193D8F48C2902E9F2 /* Build configuration list for PBXNativeTarget "Reindeer" */;
+			buildPhases = (
+				76EDA0E177D7AE113EE17E487E40A947 /* Sources */,
+				28D58EC935A4D8310367A9A118E6E6C0 /* Frameworks */,
+				BCF78AE0F6EC4C288466C511A92EFFE6 /* Resources */,
+				37FBFF9F0472C7BCBDC8862BFFB22317 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABC964060DA50659C77A2B00B0EE6435 /* PBXTargetDependency */,
+			);
+			name = Reindeer;
+			productName = Reindeer;
+			productReference = DBEB8ADF4E2A1924FEF43352AAA93D79 /* Reindeer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6ACC62A5D11BCCA52840D4C5F69C59ED /* Pods-Reindeer_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F24A9B44B9B68DD33CCCF5F4999FCD5 /* Build configuration list for PBXNativeTarget "Pods-Reindeer_Tests" */;
+			buildPhases = (
+				42AD316B5FDEC19A5D735F7AB3118E73 /* Sources */,
+				4BB24DB53130CB9BC2FD73DFEC4AD5D1 /* Frameworks */,
+				282962806B98922A54F58372AA8A60C4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14A2E7FB157C0DFEC97B65067E36D988 /* PBXTargetDependency */,
+			);
+			name = "Pods-Reindeer_Tests";
+			productName = "Pods-Reindeer_Tests";
+			productReference = 070F20B2C82F82FF6D4489B4DA9DC088 /* Pods_Reindeer_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6F672365AA903ED9A177792BC0DAD8EA /* Reindeer-Reindeer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5797E3BA0BFE2049C27D7A6352DEF14 /* Build configuration list for PBXNativeTarget "Reindeer-Reindeer" */;
+			buildPhases = (
+				3631B441B07A2EE2E5D22832FF648BFA /* Sources */,
+				26884D5043E2D3A99042AE6A23C1D3F8 /* Frameworks */,
+				88A68CDE192F971E4EE7B19489D41EE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Reindeer-Reindeer";
+			productName = "Reindeer-Reindeer";
+			productReference = 3F939C3BD0E3C3BFBAF9D0A6A0F3556D /* Reindeer.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		7B267A413B8917727A4D663E060BB5B5 /* Pods-Reindeer_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AEDD2A702AFEC736A66DB8751212660 /* Build configuration list for PBXNativeTarget "Pods-Reindeer_Example" */;
+			buildPhases = (
+				1EFE2E1D0852296D74C5DF79586F9D36 /* Sources */,
+				47B7AFFA0BCEE70D04F7D10D2B2AAB65 /* Frameworks */,
+				034C731BE697EE7300F3761107B90D87 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD7CED36F00CF1B41EAF961062DAD330 /* PBXTargetDependency */,
+			);
+			name = "Pods-Reindeer_Example";
+			productName = "Pods-Reindeer_Example";
+			productReference = A8C525D90E2BFBB9821DB2B79B1445AC /* Pods_Reindeer_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = BBB8438C1F8C69F80BF7B46F62532E7F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B267A413B8917727A4D663E060BB5B5 /* Pods-Reindeer_Example */,
+				6ACC62A5D11BCCA52840D4C5F69C59ED /* Pods-Reindeer_Tests */,
+				493AC79C5EDF4B9CAB7BD029C5367056 /* Reindeer */,
+				6F672365AA903ED9A177792BC0DAD8EA /* Reindeer-Reindeer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88A68CDE192F971E4EE7B19489D41EE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCF78AE0F6EC4C288466C511A92EFFE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				327BF50D46D72EBF7907B1B1C2FAC96A /* Reindeer.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1EFE2E1D0852296D74C5DF79586F9D36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				615351A5821E678A69CD3BD2C358C3BE /* Pods-Reindeer_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3631B441B07A2EE2E5D22832FF648BFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42AD316B5FDEC19A5D735F7AB3118E73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BD599715F4DC7E35E756657883ACE04 /* Pods-Reindeer_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76EDA0E177D7AE113EE17E487E40A947 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BC813F99A7B09FE5088192DA785B952 /* Reindeer-dummy.m in Sources */,
+				CADFC136BEFD7AAF6ED088814C0A9227 /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14A2E7FB157C0DFEC97B65067E36D988 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Reindeer;
+			target = 493AC79C5EDF4B9CAB7BD029C5367056 /* Reindeer */;
+			targetProxy = 47035FFCE75572612BAF1ED3E6D6ECC6 /* PBXContainerItemProxy */;
+		};
+		ABC964060DA50659C77A2B00B0EE6435 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Reindeer-Reindeer";
+			target = 6F672365AA903ED9A177792BC0DAD8EA /* Reindeer-Reindeer */;
+			targetProxy = 61A81099BC75A85D9A237B6ECBEA5157 /* PBXContainerItemProxy */;
+		};
+		AD7CED36F00CF1B41EAF961062DAD330 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Reindeer;
+			target = 493AC79C5EDF4B9CAB7BD029C5367056 /* Reindeer */;
+			targetProxy = 89506BEF8DDA709267FF0DEE24F1C331 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		233CB10083F27852D5F21F30F97E7DBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C94AB8F435F3C0F041E016C89FCB4CF /* Pods-Reindeer_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Reindeer_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Reindeer_Example/Pods-Reindeer_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Reindeer_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		552D02D5BA751AC2E8790D2811D496CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		665928B6B65E377FA3F303E891CEB913 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD6BE72B6ABD5E4FA8AA4542F3C26265 /* Reindeer.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = Reindeer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		7F7EBE7A96743FB82A273E898A4C7458 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D880C002BAF5933D26B921FAF934C30A /* Pods-Reindeer_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Reindeer_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Reindeer_Example/Pods-Reindeer_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Reindeer_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8270318BD2E0A23C38FCC1A0C5D78A7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46C58F7D919E1993DF6AD961ECA8A689 /* Pods-Reindeer_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Reindeer_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Reindeer_Tests/Pods-Reindeer_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Reindeer_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9028667F8002925E95401946F8916C0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD6BE72B6ABD5E4FA8AA4542F3C26265 /* Reindeer.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Reindeer/Reindeer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Reindeer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Reindeer/Reindeer.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Reindeer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CD2E1AC37AF07D67295290F93FE8C2E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 628A694329B17B9DAA954CEC661BB06B /* Pods-Reindeer_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Reindeer_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Reindeer_Tests/Pods-Reindeer_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Reindeer_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D3097CB08E2480C84D634587C3ECD166 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD6BE72B6ABD5E4FA8AA4542F3C26265 /* Reindeer.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Reindeer/Reindeer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Reindeer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Reindeer/Reindeer.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Reindeer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E46EB3F9784FF613921832D9D59CA43D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD6BE72B6ABD5E4FA8AA4542F3C26265 /* Reindeer.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = Reindeer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552D02D5BA751AC2E8790D2811D496CA /* Debug */,
+				10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AEDD2A702AFEC736A66DB8751212660 /* Build configuration list for PBXNativeTarget "Pods-Reindeer_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F7EBE7A96743FB82A273E898A4C7458 /* Debug */,
+				233CB10083F27852D5F21F30F97E7DBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F24A9B44B9B68DD33CCCF5F4999FCD5 /* Build configuration list for PBXNativeTarget "Pods-Reindeer_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD2E1AC37AF07D67295290F93FE8C2E0 /* Debug */,
+				8270318BD2E0A23C38FCC1A0C5D78A7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAFF0A32F7F9C0D193D8F48C2902E9F2 /* Build configuration list for PBXNativeTarget "Reindeer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9028667F8002925E95401946F8916C0C /* Debug */,
+				D3097CB08E2480C84D634587C3ECD166 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5797E3BA0BFE2049C27D7A6352DEF14 /* Build configuration list for PBXNativeTarget "Reindeer-Reindeer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E46EB3F9784FF613921832D9D59CA43D /* Debug */,
+				665928B6B65E377FA3F303E891CEB913 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

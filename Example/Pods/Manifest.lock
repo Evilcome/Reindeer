@@ -1,0 +1,14 @@
+PODS:
+  - Reindeer (0.1.0)
+
+DEPENDENCIES:
+  - Reindeer (from `../`)
+
+EXTERNAL SOURCES:
+  Reindeer:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Reindeer: eaf9cde7e454088ac946477bc0965fc25c2a8537
+
+COCOAPODS: 0.39.0

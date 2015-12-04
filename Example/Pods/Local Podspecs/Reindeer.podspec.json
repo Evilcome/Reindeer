@@ -1,0 +1,25 @@
+{
+  "name": "Reindeer",
+  "version": "0.1.0",
+  "summary": "A short description of Reindeer.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/Reindeer",
+  "license": "MIT",
+  "authors": {
+    "Evilcome": "evilcome.com@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/Reindeer.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "Reindeer": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

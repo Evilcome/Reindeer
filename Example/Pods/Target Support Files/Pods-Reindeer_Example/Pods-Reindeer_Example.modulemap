@@ -1,0 +1,6 @@
+framework module Pods_Reindeer_Example {
+  umbrella header "Pods-Reindeer_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
