@@ -12,10 +12,13 @@
 		5BD599715F4DC7E35E756657883ACE04 /* Pods-Reindeer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C31AC7DD2098577096045DDF9E8A0B7F /* Pods-Reindeer_Tests-dummy.m */; };
 		615351A5821E678A69CD3BD2C358C3BE /* Pods-Reindeer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF49364059A571AFC204D57D264A7401 /* Pods-Reindeer_Example-dummy.m */; };
 		6693DD132BFEFBD6C8109D8049A7BA90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		B07C0EDD1C11ACC200409A2F /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE15DB1C11A9DF00B52524 /* BannerViewController.swift */; };
+		B07C0EDF1C11ACD600409A2F /* UIView-Reindeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE15D91C11A6C700B52524 /* UIView-Reindeer.swift */; };
+		B07C0EE01C11ACDA00409A2F /* BannerPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE15DD1C11A9F400B52524 /* BannerPageViewController.swift */; };
+		B07C0EE11C11ACDE00409A2F /* Reindeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE15D71C11923300B52524 /* Reindeer.swift */; };
 		B1073446B21D8BADA118F4A16FA5E699 /* Pods-Reindeer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D948E3C9E26897A43D911B019D6209D /* Pods-Reindeer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0C587B230414755353A0CB5AD3B27EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		C6C04BC515AE78A3B41897B6F82A7F10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		CADFC136BEFD7AAF6ED088814C0A9227 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A769C3E976B3CBB00D8F795BCD8025 /* ReplaceMe.swift */; };
 		E6F1EAB43C4044E8916C638BE353BC48 /* Reindeer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ED4D2B6CF8F0F36B75C28803D4982A7 /* Reindeer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED16739ABBDF48B54DEBDD86C966B1BB /* Pods-Reindeer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3796FE922F4F856EE7184BF2F785B9B2 /* Pods-Reindeer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -65,8 +68,11 @@
 		6B3D07C7743C7A450770FBE67F370ABE /* Pods-Reindeer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Reindeer_Example.modulemap"; sourceTree = "<group>"; };
 		7E0B9DC00D9F5173F6EE167F4D03A356 /* Pods-Reindeer_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Reindeer_Tests.modulemap"; sourceTree = "<group>"; };
 		8C94AB8F435F3C0F041E016C89FCB4CF /* Pods-Reindeer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Reindeer_Example.release.xcconfig"; sourceTree = "<group>"; };
-		94A769C3E976B3CBB00D8F795BCD8025 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		A8C525D90E2BFBB9821DB2B79B1445AC /* Pods_Reindeer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reindeer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0BE15D71C11923300B52524 /* Reindeer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reindeer.swift; sourceTree = "<group>"; };
+		B0BE15D91C11A6C700B52524 /* UIView-Reindeer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView-Reindeer.swift"; sourceTree = "<group>"; };
+		B0BE15DB1C11A9DF00B52524 /* BannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
+		B0BE15DD1C11A9F400B52524 /* BannerPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerPageViewController.swift; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BED4A4A7AE42AF65B19ED367978FAECF /* Pods-Reindeer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Reindeer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C1DDB04BC934C091D5DDD76F1CDC1299 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -188,7 +194,10 @@
 		ABF81604BD8C9A89E6C651E737CBCAA0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				94A769C3E976B3CBB00D8F795BCD8025 /* ReplaceMe.swift */,
+				B0BE15D71C11923300B52524 /* Reindeer.swift */,
+				B0BE15D91C11A6C700B52524 /* UIView-Reindeer.swift */,
+				B0BE15DB1C11A9DF00B52524 /* BannerViewController.swift */,
+				B0BE15DD1C11A9F400B52524 /* BannerPageViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -354,7 +363,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -423,8 +432,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B07C0EE01C11ACDA00409A2F /* BannerPageViewController.swift in Sources */,
+				B07C0EE11C11ACDE00409A2F /* Reindeer.swift in Sources */,
+				B07C0EDF1C11ACD600409A2F /* UIView-Reindeer.swift in Sources */,
+				B07C0EDD1C11ACC200409A2F /* BannerViewController.swift in Sources */,
 				4BC813F99A7B09FE5088192DA785B952 /* Reindeer-dummy.m in Sources */,
-				CADFC136BEFD7AAF6ED088814C0A9227 /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +502,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8C94AB8F435F3C0F041E016C89FCB4CF /* Pods-Reindeer_Example.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -571,6 +584,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D880C002BAF5933D26B921FAF934C30A /* Pods-Reindeer_Example.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
