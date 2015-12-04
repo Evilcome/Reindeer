@@ -24,10 +24,22 @@ public class BannerPageViewController: UIPageViewController, UIPageViewControlle
     public var images: [AnyObject?] = []
     
     // rolling interval
-    public var interval: NSTimeInterval = 0
+    public var interval: NSTimeInterval = 0 {
+        willSet {
+            if newValue <= 1 && newValue != 0 {
+                self.interval = 1
+            } else {
+                self.interval = newValue
+            }
+        }
+    }
     
     // placeholder image
     public var placeholderImage: UIImage?
+    
+    // MARK: Init
+    
+    
 
     // MARK: Life Circle
     
