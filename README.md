@@ -7,6 +7,8 @@
 
 A rolling image banner view for app display some promotion elements, support remote image and auto rolling. You can use both autolayout and programming to create the banner view.
 
+![screenshot](./Example/Reindeer/Images.xcassets/example.imageset/example.png)
+
 ## Feature
 
 [x] Image banner
