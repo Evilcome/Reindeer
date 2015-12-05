@@ -32,6 +32,10 @@ class ViewController: UIViewController {
             
             anotherBanner.placeholderImage = UIImage(named: "placeholder")
             
+            anotherBanner.setRemoteImageFetche({ (imageView, url, placeHolderImage) -> Void in
+                imageView.kf_setImageWithURL(NSURL(string: url)!, placeholderImage: placeHolderImage)
+            })
+            
             anotherBanner.images = [
                 "https://cdn-ifnotalk-com.alikunlun.com/images/3/cd/cbf38bc67d58fb61c42a14f6b468c.jpg",
                 UIImage(named: "reindeer-1"),
