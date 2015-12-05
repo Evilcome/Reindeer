@@ -9,15 +9,37 @@
 import UIKit
 import Reindeer
 import Kingfisher
+import SnapKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var bannerView: UIView!
+    @IBOutlet weak var anotherBannerWrap: UIView!
+    var anotherBanner: BannerPageViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        
+        anotherBanner = BannerPageViewController()
+        
+        if let anotherBanner = anotherBanner {
+            anotherBannerWrap.addSubview(anotherBanner.view)
+            anotherBanner.view.snp_makeConstraints { (make) -> Void in
+                make.edges.equalTo(self.anotherBannerWrap)
+            }
+            
+            anotherBanner.interval = 3
+            
+            anotherBanner.placeholderImage = UIImage(named: "placeholder")
+            
+            anotherBanner.images = [
+                "https://cdn-ifnotalk-com.alikunlun.com/images/3/cd/cbf38bc67d58fb61c42a14f6b468c.jpg",
+                UIImage(named: "reindeer-1"),
+                UIImage(named: "reindeer-2")
+            ]
+            
+            anotherBanner.startRolling()
+        }
     }
 
     override func didReceiveMemoryWarning() {

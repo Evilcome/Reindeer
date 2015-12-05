@@ -29,7 +29,7 @@ class BannerViewController: UIViewController {
     // MARK: Properties
     
     // index of banner group
-    var index: Int = 0
+    var index: Int = -1
     
     // user setted callback when tapped
     var tapHandler: BannerTapHandler?
@@ -112,6 +112,6 @@ class BannerViewController: UIViewController {
     
     func setImage(image: AnyObject?) {
         self._image = image
-        self._renderImage()
+//        self._renderImage()
     }
 }

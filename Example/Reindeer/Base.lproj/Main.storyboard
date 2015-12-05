@@ -5,6 +5,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
+        <!--Banner Page View Controller-->
+        <scene sceneID="9qQ-gE-KFI">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Nbi-Be-osE" customClass="BannerPageViewController" customModule="Reindeer" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I5x-WL-wUD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="360" y="-260"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -24,36 +32,35 @@
                                     <constraint firstAttribute="height" constant="226" id="sBx-T3-XjG"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="oga-8N-ZiA" kind="embed" id="8WL-7h-rtV"/>
+                                    <segue destination="Nbi-Be-osE" kind="embed" id="H0G-O9-pHr"/>
                                 </connections>
                             </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lye-bF-FuA">
+                                <rect key="frame" x="0.0" y="296" width="600" height="120"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="p9v-Cp-ruj"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="jrA-6X-zct" secondAttribute="trailing" id="JBy-Ah-40n"/>
+                            <constraint firstItem="Lye-bF-FuA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="MCG-I6-kUY"/>
+                            <constraint firstAttribute="trailing" secondItem="Lye-bF-FuA" secondAttribute="trailing" id="OzT-f1-6ev"/>
                             <constraint firstItem="jrA-6X-zct" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="QBn-9F-LPI"/>
+                            <constraint firstItem="Lye-bF-FuA" firstAttribute="top" secondItem="jrA-6X-zct" secondAttribute="bottom" constant="50" id="g3r-Ni-A91"/>
                             <constraint firstItem="jrA-6X-zct" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="vGP-kO-m2C"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="anotherBannerWrap" destination="Lye-bF-FuA" id="NDC-D1-QM8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-        </scene>
-        <!--Banner Page View Controller-->
-        <scene sceneID="lJh-Ik-zGz">
-            <objects>
-                <viewController id="oga-8N-ZiA" customClass="BannerPageViewController" customModule="Reindeer" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Rf7-2B-HWR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="226"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Nx-LY-QcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="245" y="-255"/>
         </scene>
     </scenes>
 </document>
