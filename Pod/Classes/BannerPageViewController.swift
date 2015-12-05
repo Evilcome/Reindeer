@@ -103,14 +103,6 @@ public class BannerPageViewController: UIPageViewController, UIPageViewControlle
     
     // MARK: Private Function
     
-    private func _pauseRolling() {
-        
-    }
-    
-    private func _resumeRolling() {
-        
-    }
-    
     private func _getNextIndex(currentIndex: Int, isBefore: Bool) -> Int {
         var nextIndex = -1
         var currentIndex = currentIndex
@@ -177,10 +169,19 @@ public class BannerPageViewController: UIPageViewController, UIPageViewControlle
     private func _autoNextPage() {
         if let currentBanner = viewControllers?.first as? BannerViewController {
             if let nextView = _nextViewController(currentBanner, isBefore: false) {
-                _pageControl.currentPage = nextView.index
-                self.setViewControllers([nextView], direction: .Forward, animated: true, completion: nil)
+                self.setViewControllers([nextView], direction: .Forward, animated: true, completion: { (finished) -> Void in
+                    self._pageControl.currentPage = nextView.index
+                })
             }
         }
+    }
+    
+    private func _pauseRolling() {
+        _timer?.fireDate = NSDate.distantFuture()
+    }
+    
+    private func _resumeRolling() {
+        _timer?.fireDate = NSDate(timeInterval: interval, sinceDate: NSDate())
     }
 
     // MARK: Public Function
@@ -227,10 +228,11 @@ public class BannerPageViewController: UIPageViewController, UIPageViewControlle
     // MARK: UIPageViewControllerDelegate
     
     public func pageViewController(pageViewController: UIPageViewController, willTransitionToViewControllers pendingViewControllers: [UIViewController]) {
-        
+        self._pauseRolling()
     }
     
     public func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        self._resumeRolling()
         if let currentBanner = pageViewController.viewControllers?.first as? BannerViewController {
             _pageControl.currentPage = currentBanner.index
         }
