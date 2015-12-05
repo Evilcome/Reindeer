@@ -10,7 +10,4 @@ import UIKit
 
 public extension UIView {
     
-    public func rd_enableBanner() {
-        
-    }
 }
