@@ -1,6 +1,5 @@
 # ![LOGO](./Example/Reindeer/Images.xcassets/AppIcon.appiconset/Icon-Small@2x.png) Reindeer
 
-[![CI Status](http://img.shields.io/travis/Evilcome/Reindeer.svg?style=flat)](https://travis-ci.org/Evilcome/Reindeer)
 [![Version](https://img.shields.io/cocoapods/v/Reindeer.svg?style=flat)](http://cocoapods.org/pods/Reindeer)
 [![License](https://img.shields.io/cocoapods/l/Reindeer.svg?style=flat)](http://cocoapods.org/pods/Reindeer)
 [![Platform](https://img.shields.io/cocoapods/p/Reindeer.svg?style=flat)](http://cocoapods.org/pods/Reindeer)
@@ -30,6 +29,78 @@ pod "Reindeer"
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+### Read before use
+
+If you want to get remote images as your banner content, you can just write a image url in the images array. In this case, you should customize a remote image fetcher, you can use [SDWebImage](https://github.com/rs/SDWebImage) or [Kingfisher](https://github.com/onevcat/Kingfisher). Here has a usage with [Kingfisher](https://github.com/onevcat/Kingfisher):
+```swift 
+banner.setRemoteImageFetche({ (imageView, url, placeHolderImage) -> Void in
+imageView.kf_setImageWithURL(NSURL(string: url)!, placeholderImage: placeHolderImage)
+})
+```
+
+If you want to programming use banner view, it's better if you use a autolayout tool, such as: [SnapKit](https://github.com/SnapKit/SnapKit).
+```swift
+bannerController.view.snp_makeConstraints { (make) -> Void in
+    make.edges.equalTo(self.bannerWrapView)
+}
+```
+
+### Programming usage
+
+A full programming usage example:
+
+- define a banner controller first
+
+```swift
+var _bannerController: BannerPageViewController?
+```
+
+- init the banner controller
+
+```swift
+func initRollingBanner() {
+    _bannerController = BannerPageViewController()
+
+    if let bannerController = _bannerController {
+        self.addChildViewController(bannerController)
+
+        // the `self.bannerWrapView` can be replaced with the view you want to add the banner.
+        self.bannerWrapView.addSubview(bannerController.view)
+        bannerController.view.snp_makeConstraints { (make) -> Void in
+            make.edges.equalTo(self.bannerWrapView)
+        }
+
+        bannerController.didMoveToParentViewController(self)
+        bannerController.interval = 5
+        bannerController.placeholderImage = UIImage(named: "banner_holder")
+
+        bannerController.setRemoteImageFetche({ (imageView, url, placeholderImage) -> Void in
+            imageView.kf_setImageWithURL(NSURL(string: url)!, placeholderImage: placeholderImage)
+        })
+    }
+}
+```
+
+- render the banner, and start rolling
+
+```swift
+if let bannerController = _bannerController {
+    anotherBanner.images = [
+        "https://cdn-ifnotalk-com.alikunlun.com/images/3/cd/cbf38bc67d58fb61c42a14f6b468c.jpg",
+        UIImage(named: "reindeer-1"),
+        UIImage(named: "reindeer-2")
+    ]
+
+    anotherBanner.startRolling()
+}
+
+```
+
+
+### Storyboard usage
+
+You can clone this repo and see the storyboard usage, don't forget to run `pod install` first, because the example use [Kingfisher](https://github.com/onevcat/Kingfisher) as image fetcher and [SnapKit](https://github.com/SnapKit/SnapKit) layout in programming.
 
 ```swift
 if let banner = segue.destinationViewController as? BannerPageViewController {
