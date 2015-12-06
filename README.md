@@ -35,7 +35,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 If you want to get remote images as your banner content, you can just write a image url in the images array. In this case, you should customize a remote image fetcher, you can use [SDWebImage](https://github.com/rs/SDWebImage) or [Kingfisher](https://github.com/onevcat/Kingfisher). Here has a usage with [Kingfisher](https://github.com/onevcat/Kingfisher):
 ```swift 
 banner.setRemoteImageFetche({ (imageView, url, placeHolderImage) -> Void in
-imageView.kf_setImageWithURL(NSURL(string: url)!, placeholderImage: placeHolderImage)
+    imageView.kf_setImageWithURL(NSURL(string: url)!, placeholderImage: placeHolderImage)
 })
 ```
 
@@ -78,6 +78,10 @@ func initRollingBanner() {
         bannerController.setRemoteImageFetche({ (imageView, url, placeholderImage) -> Void in
             imageView.kf_setImageWithURL(NSURL(string: url)!, placeholderImage: placeholderImage)
         })
+
+        bannerController.setBannerTapHandler({ (index) -> Void in
+            print("image with index \(index) tapped")
+        })
     }
 }
 ```
@@ -116,17 +120,17 @@ if let banner = segue.destinationViewController as? BannerPageViewController {
         imageView.kf_setImageWithURL(NSURL(string: url)!, placeholderImage: placeHolderImage)
     })
 
+    // (Optional) Set banner tapped hander
+    banner.setBannerTapHandler({ (index) -> Void in
+        print("banner with index \(index) tapped.")
+    })
+
     // (Need) Set images
     banner.images = [
         "https://cdn-ifnotalk-com.alikunlun.com/images/3/cd/cbf38bc67d58fb61c42a14f6b468c.jpg",
         UIImage(named: "reindeer-1"),
         UIImage(named: "reindeer-2")
     ]
-
-    // (Optional) Set banner tapped hander
-    banner.setBannerTapHandler({ (index) -> Void in
-        print("banner with index \(index) tapped.")
-    })
 
     // (Optional) Start auto rolling
     banner.startRolling()
