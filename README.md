@@ -1,4 +1,4 @@
-# Reindeer
+# ![LOGO](./Example/Reindeer/Images.xcassets/AppIcon.appiconset/Icon-Small@2x.png) Reindeer
 
 [![CI Status](http://img.shields.io/travis/Evilcome/Reindeer.svg?style=flat)](https://travis-ci.org/Evilcome/Reindeer)
 [![Version](https://img.shields.io/cocoapods/v/Reindeer.svg?style=flat)](http://cocoapods.org/pods/Reindeer)
