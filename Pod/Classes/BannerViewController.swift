@@ -62,8 +62,12 @@ class BannerViewController: UIViewController {
         let bindings = ["_imageView": _imageView, "_tapAreaButton": _tapAreaButton]
         self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[_imageView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: bindings))
         self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[_imageView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: bindings))
+        _imageView.autoresizingMask = [UIViewAutoresizing.FlexibleLeftMargin, UIViewAutoresizing.FlexibleRightMargin, UIViewAutoresizing.FlexibleTopMargin, UIViewAutoresizing.FlexibleBottomMargin]
+        
         self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[_tapAreaButton]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: bindings))
         self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[_tapAreaButton]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: bindings))
+        _tapAreaButton.autoresizingMask = [UIViewAutoresizing.FlexibleLeftMargin, UIViewAutoresizing.FlexibleRightMargin, UIViewAutoresizing.FlexibleTopMargin, UIViewAutoresizing.FlexibleBottomMargin]
+        
     }
 
     override func didReceiveMemoryWarning() {
