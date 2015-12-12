@@ -44,6 +44,10 @@ class BannerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // fix: when the self view under a keeping changing autolayout,
+        // the nextpage's imageview will showing out.
+        self.view.clipsToBounds = true
 
         // init the imageView
         _imageView = UIImageView()
