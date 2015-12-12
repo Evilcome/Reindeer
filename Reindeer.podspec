@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Reindeer"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "A rolling image banner view for app display some promotion elements, written in Swift 2."
 
 # This description is used to generate tags and improve search results.
