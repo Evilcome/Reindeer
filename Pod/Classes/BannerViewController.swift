@@ -9,8 +9,8 @@
 import UIKit
 
 
-public typealias BannerTapHandler = (index: Int) -> Void
-public typealias RemoteImageFetcher = (imageView: UIImageView, url: String, placeHolderImage: UIImage?) -> Void
+public typealias BannerTapHandler = (_ index: Int) -> Void
+public typealias RemoteImageFetcher = (_ imageView: UIImageView, _ url: String, _ placeHolderImage: UIImage?) -> Void
 
 
 class BannerViewController: UIViewController {
@@ -18,10 +18,10 @@ class BannerViewController: UIViewController {
     // MARK: Private Properties
     
     // banner image wrapper
-    private var _imageView: UIImageView!
+    fileprivate var _imageView: UIImageView!
     
     // an transparent button to response people touch
-    private var _tapAreaButton: UIButton!
+    fileprivate var _tapAreaButton: UIButton!
     
     // showing image
     var _image: AnyObject?
@@ -51,23 +51,23 @@ class BannerViewController: UIViewController {
 
         // init the imageView
         _imageView = UIImageView()
-        _imageView.contentMode = .ScaleAspectFill
-        _imageView.backgroundColor = UIColor.grayColor()
+        _imageView.contentMode = .scaleAspectFill
+        _imageView.backgroundColor = UIColor.gray
         self.view.addSubview(_imageView)
         
         _tapAreaButton = UIButton()
-        _tapAreaButton.addTarget(self, action: "tapped:", forControlEvents: .TouchUpInside)
+        _tapAreaButton.addTarget(self, action: #selector(BannerViewController.tapped(_:)), for: .touchUpInside)
         self.view.addSubview(_tapAreaButton)
         
         // set the constraint to layout the size
         _imageView.translatesAutoresizingMaskIntoConstraints = false
         _tapAreaButton.translatesAutoresizingMaskIntoConstraints = false
         
-        let bindings = ["_imageView": _imageView, "_tapAreaButton": _tapAreaButton]
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[_imageView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: bindings))
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[_imageView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: bindings))
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[_tapAreaButton]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: bindings))
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[_tapAreaButton]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: bindings))
+        let bindings = ["_imageView": _imageView, "_tapAreaButton": _tapAreaButton] as [String : Any]
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[_imageView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: bindings))
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[_imageView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: bindings))
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[_tapAreaButton]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: bindings))
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[_tapAreaButton]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: bindings))
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,7 +75,7 @@ class BannerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self._renderImage()
@@ -83,15 +83,15 @@ class BannerViewController: UIViewController {
     
     // MARK: User Action
 
-    func tapped(sender: AnyObject) {
+    func tapped(_ sender: AnyObject) {
         if let tapHandler = tapHandler {
-            tapHandler(index: self.index)
+            tapHandler(self.index)
         }
     }
     
     // MARK: Display Image
     
-    private func _renderImage() {
+    fileprivate func _renderImage() {
         if let image = _image {
             
             if image is String {
@@ -100,7 +100,7 @@ class BannerViewController: UIViewController {
                 
                 // use a remote image fetcher get the image
                 if let remoteImageFetcher = remoteImageFetcher {
-                    remoteImageFetcher(imageView: self._imageView, url: url, placeHolderImage: self.placeholderImage)
+                    remoteImageFetcher(self._imageView, url, self.placeholderImage)
                 } else {
                     // WARNING: Reindeer : if you use image url, you should set a remote image fetcher.
                     _imageView.image = placeholderImage
@@ -114,7 +114,7 @@ class BannerViewController: UIViewController {
         }
     }
     
-    func setImage(image: AnyObject?) {
+    func setImage(_ image: AnyObject?) {
         self._image = image
 //        self._renderImage()
     }

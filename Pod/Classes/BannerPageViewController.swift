@@ -8,30 +8,30 @@
 
 import UIKit
 
-public class BannerPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+open class BannerPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     // MARK: Private Property
     
     // this view did load
-    private var _loaded = false
+    fileprivate var _loaded = false
     
     // user setted callback when tapped
-    private var _bannerTapHandler: BannerTapHandler?
+    fileprivate var _bannerTapHandler: BannerTapHandler?
     
     // user custom remote image fetcher
-    private var _remoteImageFetcher: RemoteImageFetcher?
+    fileprivate var _remoteImageFetcher: RemoteImageFetcher?
     
     // page controler 
-    private var _pageControl: UIPageControl
+    fileprivate var _pageControl: UIPageControl
     
     // a timer for control the page
     
-    private var _timer: NSTimer?
+    fileprivate var _timer: Timer?
     
     // MARK: Public Property
     
     // rolling images
-    public var images: [AnyObject?] = [] {
+    open var images: [AnyObject?] = [] {
         didSet {
             _pageControl.numberOfPages = images.count
             
@@ -42,7 +42,7 @@ public class BannerPageViewController: UIPageViewController, UIPageViewControlle
     }
     
     // rolling interval
-    public var interval: NSTimeInterval = 0 {
+    open var interval: TimeInterval = 0 {
         willSet {
             if newValue <= 1 && newValue != 0 {
                 self.interval = 1
@@ -53,7 +53,7 @@ public class BannerPageViewController: UIPageViewController, UIPageViewControlle
     }
     
     // placeholder image
-    public var placeholderImage: UIImage?
+    open var placeholderImage: UIImage?
     
     // MARK: Init
     
@@ -62,7 +62,7 @@ public class BannerPageViewController: UIPageViewController, UIPageViewControlle
         // init the page controller and banner views
         _pageControl = UIPageControl()
         
-        super.init(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
+        super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     }
 
     required public init?(coder: NSCoder) {
@@ -75,7 +75,7 @@ public class BannerPageViewController: UIPageViewController, UIPageViewControlle
 
     // MARK: Life Circle
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         
         self._loaded = true
@@ -83,34 +83,34 @@ public class BannerPageViewController: UIPageViewController, UIPageViewControlle
         self.dataSource = self
         self.delegate = self
         
-        self.view.backgroundColor = UIColor.grayColor()
+        self.view.backgroundColor = UIColor.gray
         self.view.addSubview(_pageControl)
         
         // layout page control
         _pageControl.translatesAutoresizingMaskIntoConstraints = false
         let bindings = [ "_pageControl": _pageControl ]
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[_pageControl]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: bindings))
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[_pageControl]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: bindings))
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[_pageControl]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: bindings))
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[_pageControl]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: bindings))
         
         // init first view controller and show
         _setupFirstView()
     }
 
-    override public func didReceiveMemoryWarning() {
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     // MARK: Private Function
     
-    private func _getNextIndex(currentIndex: Int, isBefore: Bool) -> Int {
+    fileprivate func _getNextIndex(_ currentIndex: Int, isBefore: Bool) -> Int {
         var nextIndex = -1
         var currentIndex = currentIndex
         
         if isBefore {
             
             // index should -1
-            currentIndex--
+            currentIndex -= 1
             if currentIndex == -1 {
                 nextIndex = images.count-1
             } else {
@@ -120,7 +120,7 @@ public class BannerPageViewController: UIPageViewController, UIPageViewControlle
         } else {
             
             // index should +1
-            currentIndex++
+            currentIndex += 1
             if currentIndex == images.count {
                 nextIndex = 0
             } else {
@@ -131,7 +131,7 @@ public class BannerPageViewController: UIPageViewController, UIPageViewControlle
         return nextIndex
     }
     
-    private func _nextViewController(viewController: UIViewController, isBefore: Bool) -> BannerViewController? {
+    fileprivate func _nextViewController(_ viewController: UIViewController, isBefore: Bool) -> BannerViewController? {
         if let currentBanner = viewController as? BannerViewController {
             let currentIndex = currentBanner.index
             let nextIndex = _getNextIndex(currentIndex, isBefore: isBefore)
@@ -153,7 +153,7 @@ public class BannerPageViewController: UIPageViewController, UIPageViewControlle
         return nil
     }
     
-    private func _setupFirstView() {
+    fileprivate func _setupFirstView() {
         if images.count > 0 {
             let banner = BannerViewController()
             banner.index = 0
@@ -162,35 +162,35 @@ public class BannerPageViewController: UIPageViewController, UIPageViewControlle
             banner.tapHandler = _bannerTapHandler
             banner.remoteImageFetcher = _remoteImageFetcher
             
-            self.setViewControllers([banner], direction: .Forward, animated: true, completion: nil)
+            self.setViewControllers([banner], direction: .forward, animated: true, completion: nil)
         }
     }
     
-    private func _autoNextPage() {
+    fileprivate func _autoNextPage() {
         if let currentBanner = viewControllers?.first as? BannerViewController {
             if let nextView = _nextViewController(currentBanner, isBefore: false) {
-                self.setViewControllers([nextView], direction: .Forward, animated: true, completion: { (finished) -> Void in
+                self.setViewControllers([nextView], direction: .forward, animated: true, completion: { (finished) -> Void in
                     self._pageControl.currentPage = nextView.index
                 })
             }
         }
     }
     
-    private func _pauseRolling() {
-        _timer?.fireDate = NSDate.distantFuture()
+    fileprivate func _pauseRolling() {
+        _timer?.fireDate = Date.distantFuture
     }
     
-    private func _resumeRolling() {
-        _timer?.fireDate = NSDate(timeInterval: interval, sinceDate: NSDate())
+    fileprivate func _resumeRolling() {
+        _timer?.fireDate = Date(timeInterval: interval, since: Date())
     }
 
     // MARK: Public Function
     
-    func setInterval(interval:NSTimeInterval, block:()->Void) -> NSTimer {
-        return NSTimer.scheduledTimerWithTimeInterval(interval, target: NSBlockOperation(block: block), selector: "main", userInfo: nil, repeats: true)
+    func setInterval(_ interval:TimeInterval, block:@escaping ()->Void) -> Timer {
+        return Timer.scheduledTimer(timeInterval: interval, target: BlockOperation(block: block), selector: #selector(Operation.main), userInfo: nil, repeats: true)
     }
     
-    public func startRolling() {
+    open func startRolling() {
         if interval != 0 {
             if _timer == nil {
                 _timer = setInterval(interval, block: { () -> Void in
@@ -200,38 +200,38 @@ public class BannerPageViewController: UIPageViewController, UIPageViewControlle
         }
     }
     
-    public func stopRolling() {
+    open func stopRolling() {
         _timer?.invalidate()
         _timer = nil
     }
     
-    public func setRemoteImageFetche(fetcher: RemoteImageFetcher) {
+    open func setRemoteImageFetche(_ fetcher: @escaping RemoteImageFetcher) {
         _remoteImageFetcher = fetcher
     }
     
-    public func setBannerTapHandler(handler: BannerTapHandler) {
+    open func setBannerTapHandler(_ handler: @escaping BannerTapHandler) {
         _bannerTapHandler = handler
     }
     
     // MARK: UIPageViewControllerDataSource
     
-    public func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    open func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         return _nextViewController(viewController, isBefore: true)
     }
     
-    public func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    open func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
         return _nextViewController(viewController, isBefore: false)
     }
     
     // MARK: UIPageViewControllerDelegate
     
-    public func pageViewController(pageViewController: UIPageViewController, willTransitionToViewControllers pendingViewControllers: [UIViewController]) {
+    open func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
         self._pauseRolling()
     }
     
-    public func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    open func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         self._resumeRolling()
         if let currentBanner = pageViewController.viewControllers?.first as? BannerViewController {
             _pageControl.currentPage = currentBanner.index
