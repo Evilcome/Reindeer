@@ -9,13 +9,12 @@
 import UIKit
 import Reindeer
 import Kingfisher
-import SnapKit
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var anotherBannerWrap: UIView!
     var anotherBanner: BannerPageViewController?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,21 +22,34 @@ class ViewController: UIViewController {
         anotherBanner = BannerPageViewController()
         
         if let anotherBanner = anotherBanner {
+            
+            // NOTE: use autolayout programmatically
+            // with help from: http://stackoverflow.com/questions/26180822/swift-adding-constraints-programmatically?answertab=votes#tab-top
+            anotherBanner.view.translatesAutoresizingMaskIntoConstraints = false
+            
             anotherBannerWrap.addSubview(anotherBanner.view)
-            anotherBanner.view.snp_makeConstraints { (make) -> Void in
-                make.edges.equalTo(self.anotherBannerWrap)
-            }
+            
+            let horizontalConstraint = NSLayoutConstraint(item: anotherBanner.view, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: anotherBannerWrap, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0)
+            let verticalConstraint = NSLayoutConstraint(item: anotherBanner.view, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: anotherBannerWrap, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0)
+            let widthConstraint = NSLayoutConstraint(item: anotherBanner.view, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: anotherBannerWrap, attribute: NSLayoutAttribute.width, multiplier: 1, constant: 0)
+            let heightConstraint = NSLayoutConstraint(item: anotherBanner.view, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: anotherBannerWrap, attribute: NSLayoutAttribute.height, multiplier: 1, constant: 0)
+            NSLayoutConstraint.activate([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
+            
+            // TODO: fix issue with SnapKit.
+//            anotherBanner.view.snp_makeConstraints { (make) -> Void in
+//                make.edges.equalTo(self.anotherBannerWrap)
+//            }
             
             anotherBanner.interval = 3
             
             anotherBanner.placeholderImage = UIImage(named: "placeholder")
             
             anotherBanner.setRemoteImageFetche({ (imageView, url, placeHolderImage) -> Void in
-                imageView.kf_setImageWithURL(NSURL(string: url)!, placeholderImage: placeHolderImage)
+                imageView.kf.setImage(with: URL(string: url)!, placeholder: placeHolderImage, options: [.transition(.fade(1))], progressBlock: nil, completionHandler: nil)
             })
             
             anotherBanner.images = [
-                "https://cdn-ifnotalk-com.alikunlun.com/images/3/cd/cbf38bc67d58fb61c42a14f6b468c.jpg",
+                "https://cdn-ifnotalk-com.alikunlun.com/images/3/cd/cbf38bc67d58fb61c42a14f6b468c.jpg" as Optional<AnyObject>,
                 UIImage(named: "reindeer-1"),
                 UIImage(named: "reindeer-2")
             ]
@@ -45,15 +57,15 @@ class ViewController: UIViewController {
             anotherBanner.startRolling()
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let banner = segue.destinationViewController as? BannerPageViewController {
+        if let banner = segue.destination as? BannerPageViewController {
             
             // (Optional) Set the rolling interval, 0 means no auto-rolling
             banner.interval = 5
@@ -63,12 +75,12 @@ class ViewController: UIViewController {
             
             // (Optional, Need with Remote Images) Set remote image fetcher
             banner.setRemoteImageFetche({ (imageView, url, placeHolderImage) -> Void in
-                imageView.kf_setImageWithURL(NSURL(string: url)!, placeholderImage: placeHolderImage)
+                imageView.kf.setImage(with: URL(string: url)!, placeholder: placeHolderImage, options: [.transition(.fade(1))], progressBlock: nil, completionHandler: nil)
             })
             
             // (Need) Set images
             banner.images = [
-                "https://cdn-ifnotalk-com.alikunlun.com/images/3/cd/cbf38bc67d58fb61c42a14f6b468c.jpg",
+                "https://cdn-ifnotalk-com.alikunlun.com/images/3/cd/cbf38bc67d58fb61c42a14f6b468c.jpg" as Optional<AnyObject>,
                 UIImage(named: "reindeer-1"),
                 UIImage(named: "reindeer-2")
             ]
@@ -82,6 +94,6 @@ class ViewController: UIViewController {
             banner.startRolling()
         }
     }
-
+    
 }
 

@@ -7,33 +7,34 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = "Reindeer"
-  s.version          = "0.1.1"
-  s.summary          = "A rolling image banner view for app display some promotion elements, written in Swift 2."
+  s.name             = 'Reindeer'
+  s.version          = '0.2.0'
+  s.summary          = 'A short description of Reindeer.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = <<-DESC
-                        A rolling image banner view for app display some promotion elements, support remote image and auto rolling. You can use both autolayout and programming to create the banner view.
-                        DESC
+#   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.homepage         = "https://github.com/Evilcome/Reindeer"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
-  s.license          = 'MIT'
-  s.author           = { "Evilcome" => "evilcome.com@gmail.com" }
-  s.source           = { :git => "https://github.com/Evilcome/Reindeer.git", :tag => s.version.to_s }
+  s.description      = <<-DESC
+TODO: Add long description of the pod here.
+                       DESC
+
+  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/Reindeer'
+  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.author           = { 'Evilcome' => 'evilcome.com@gmail.com' }
+  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/Reindeer.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.platform     = :ios, '8.0'
-  s.requires_arc = true
+  s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'Reindeer' => ['Pod/Assets/*.png']
-  }
+  s.source_files = 'Reindeer/Classes/**/*'
+  
+  # s.resource_bundles = {
+  #   'Reindeer' => ['Reindeer/Assets/*.png']
+  # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
